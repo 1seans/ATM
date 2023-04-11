@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# README for Account and ATMDeposit Components
+This is a simple React application that allows users to deposit or withdraw cash from an account balance. The application consists of two components: Account and ATMDeposit.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Account Component
+The Account component is the main component that renders the UI for the application. It keeps track of the account balance and allows the user to deposit or withdraw cash. The component uses React Hooks to manage the state of the application.
 
-## Available Scripts
+## State
+deposit: The amount of cash that the user wants to deposit or withdraw.
+totalState: The current balance of the account.
+isDeposit: A boolean value that determines if the user wants to deposit or withdraw cash.
+## Functions
+handleChange: A function that is called when the user inputs the amount of cash they want to deposit or withdraw. It updates the deposit state with the input value.
+handleSubmit: A function that is called when the user submits the deposit or withdrawal form. It updates the totalState state based on the isDeposit value.
+ATMDeposit Component
+The ATMDeposit component is a child component of Account and is responsible for rendering the deposit or withdrawal form. It receives two props from the Account component:
 
-In the project directory, you can run:
+onChange: A function that is called when the user inputs the amount of cash they want to deposit or withdraw.
+isDeposit: A boolean value that determines if the user wants to deposit or withdraw cash.
+The ATMDeposit component renders a label that displays the form and the appropriate label based on the isDeposit value.
 
-### `npm start`
+## Props
+onChange: A function that is called when the user inputs the amount of cash they want to deposit or withdraw.
+isDeposit: A boolean value that determines if the user wants to deposit or withdraw cash.
+How to Run the Application
+To run the application, first clone the repository:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+bash
+Copy code
+git clone https://github.com/yourusername/react-atm.git
+Then, navigate to the project directory and install the dependencies:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+bash
+Copy code
+cd react-atm
+npm install
+Finally, start the application:
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+sql
+Copy code
+npm start
+The application should now be running on http://localhost:3000/.
